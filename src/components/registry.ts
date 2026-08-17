@@ -88,6 +88,12 @@ export const COMPONENTS: ComponentEntry[] = [
     notes: "2 size × 4 state × on-white",
   },
   {
+    slug: "calendar",
+    name: "Date Picker",
+    figmaNode: "2715:220970",
+    notes: "single + range — month grid, Mon-first, min/max",
+  },
+  {
     slug: "dropdown-menu",
     name: "Dropdown Menu",
     figmaNode: "14094:50922",
@@ -128,6 +134,12 @@ export const COMPONENTS: ComponentEntry[] = [
     name: "Navigation",
     figmaNode: "4:192642",
     notes: "header bar (6 type) + bottom nav (item + badge)",
+  },
+  {
+    slug: "otp-input",
+    name: "OTP & PIN Input",
+    figmaNode: "7256:120631",
+    notes: "OTP + PIN (mask) × large/small × 5 state — auto-advance, paste",
   },
   {
     slug: "ott",
