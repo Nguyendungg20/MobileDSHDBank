@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+body {
+  background: var(--color-brand-white);
+  color: var(--color-neutral-10);
+  font-family: var(--font-sans);
+}

@@ -1,0 +1,240 @@
+/* Design tokens — generated from Figma "🌈Mobile - DS Đi-HDBank"
+ * File: 3wFivMDO6P0heqk4YPLJQF
+ * Source of truth: local Paint / Text / Effect styles (this DS uses Styles, not Variables).
+ * Regenerate with the /sync-tokens skill — do not hand-edit values.
+ *
+ * The Tailwind default palette, type scale and radius scale are reset to `initial`
+ * so only DS tokens exist. `bg-blue-500` and `rounded-lg` are compile errors by design.
+ */
+
+/* `static` is load-bearing: by default Tailwind tree-shakes theme variables and
+ * only emits the ones some utility class actually references, so an unused token
+ * like --color-purple-6 would simply not exist at runtime. A design system must
+ * publish its whole vocabulary — inline styles, prototypes and third-party code
+ * all read these vars — so every token is emitted whether or not a class uses it. */
+@theme static {
+  /* ---- Color ------------------------------------------------------------
+   * Figma: Brand/Solid/*, Neutral/*, Semantic/<hue>/1..10
+   * Scale runs 1 (lightest) → 10 (darkest). Brand hues are the /6 step of
+   * their matching semantic ramp: brand-red === red-6, etc.
+   */
+  --color-*: initial;
+
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  /* Not a named Figma style: the primary Button's `pressing` variant paints a raw
+   * #000000 @ 15% fill over its gradient. Named here rather than inlined as an
+   * arbitrary value. Other variants do NOT share it — they swap background colour
+   * outright — so do not reach for this as a generic "pressed" treatment. */
+  --color-press-overlay: rgb(0 0 0 / 0.15);
+
+  --color-brand-red: #da2128;
+  --color-brand-orange: #faa61a;
+  --color-brand-yellow: #ffdd00;
+  --color-brand-black: #333333; /* note: not pure black */
+  --color-brand-white: #ffffff;
+
+  --color-neutral-1: #f9fafb;
+  --color-neutral-2: #f3f4f6;
+  --color-neutral-3: #e5e7eb;
+  --color-neutral-4: #d2d6db;
+  --color-neutral-5: #9da4ae;
+  --color-neutral-6: #6c737f;
+  --color-neutral-7: #4d5761;
+  --color-neutral-8: #384250;
+  --color-neutral-9: #1f2a37;
+  --color-neutral-10: #111927;
+
+  --color-red-1: #fbe9ea;
+  --color-red-2: #f4babc;
+  --color-red-3: #ee999c;
+  --color-red-4: #e66b6f;
+  --color-red-5: #e14e53;
+  --color-red-6: #da2128;
+  --color-red-7: #c61f24;
+  --color-red-8: #9b181c;
+  --color-red-9: #781316;
+  --color-red-10: #5c0e11;
+
+  --color-orange-1: #fff6e5;
+  --color-orange-2: #ffeed1;
+  --color-orange-3: #ffe3b2;
+  --color-orange-4: #ffd080;
+  --color-orange-5: #ffbc4b;
+  --color-orange-6: #faa61a;
+  --color-orange-7: #dc8b05;
+  --color-orange-8: #aa6b04;
+  --color-orange-9: #784b03;
+  --color-orange-10: #503202;
+
+  --color-yellow-1: #fffce6;
+  --color-yellow-2: #fff4b0;
+  --color-yellow-3: #ffef8a;
+  --color-yellow-4: #ffe854;
+  --color-yellow-5: #ffe433;
+  --color-yellow-6: #ffdd00;
+  --color-yellow-7: #e8c900;
+  --color-yellow-8: #b59d00;
+  --color-yellow-9: #8c7a00;
+  --color-yellow-10: #6b5d00;
+
+  --color-green-1: #e9f4ef;
+  --color-green-2: #badecd;
+  --color-green-3: #99ceb4;
+  --color-green-4: #6bb892;
+  --color-green-5: #4eaa7d;
+  --color-green-6: #22955d;
+  --color-green-7: #1f8855;
+  --color-green-8: #186a42;
+  --color-green-9: #135233;
+  --color-green-10: #0e3f27;
+
+  --color-blue-1: #e7f0f9;
+  --color-blue-2: #b3d2ee;
+  --color-blue-3: #8ebce5;
+  --color-blue-4: #5b9dd9;
+  --color-blue-5: #3b8ad2;
+  --color-blue-6: #0a6dc7;
+  --color-blue-7: #0963b5;
+  --color-blue-8: #074d8d;
+  --color-blue-9: #063c6d;
+  --color-blue-10: #042e54;
+
+  --color-purple-1: #f4f0fa;
+  --color-purple-2: #dbd0f0;
+  --color-purple-3: #cabae8;
+  --color-purple-4: #b29ade;
+  --color-purple-5: #a386d7;
+  --color-purple-6: #8c68cd;
+  --color-purple-7: #7f5fbb;
+  --color-purple-8: #634a92;
+  --color-purple-9: #4d3971;
+  --color-purple-10: #3b2c56;
+
+  /* ---- Typography -------------------------------------------------------
+   * Figma text styles collapse to 8 sizes: every style is 130% line-height,
+   * and weight is composed separately (`text-body font-semibold`) rather than
+   * baked into the token, since Figma's 28 styles are size × weight.
+   *
+   * Letter-spacing is taken from each size's Regular style. Figma's Bold/Semibold
+   * at 14px and 12px differ by 0.1px (-0.1px / 0px); that delta is dropped as
+   * imperceptible. Sizes 32 and 20 use Figma PERCENT units (-3%), resolved here
+   * against their font size.
+   */
+  --font-sans: var(--font-be-vietnam-pro), ui-sans-serif, system-ui, sans-serif;
+
+  --text-*: initial;
+
+  --text-large-title: 32px;
+  --text-large-title--line-height: 1.3;
+  --text-large-title--letter-spacing: -0.96px; /* -3% of 32 */
+
+  --text-title2: 24px;
+  --text-title2--line-height: 1.3;
+  --text-title2--letter-spacing: -0.3px;
+
+  --text-title3: 20px;
+  --text-title3--line-height: 1.3;
+  --text-title3--letter-spacing: -0.6px; /* -3% of 20 */
+
+  --text-body: 16px;
+  --text-body--line-height: 1.3;
+  --text-body--letter-spacing: -0.2px;
+
+  --text-subheadline: 14px;
+  --text-subheadline--line-height: 1.3;
+  --text-subheadline--letter-spacing: -0.2px;
+
+  --text-caption1: 12px;
+  --text-caption1--line-height: 1.3;
+  --text-caption1--letter-spacing: -0.1px;
+
+  --text-caption2: 11px;
+  --text-caption2--line-height: 1.3;
+  --text-caption2--letter-spacing: -0.2px;
+
+  --text-overline: 12px;
+  --text-overline--line-height: 1.5; /* 18px */
+  --text-overline--letter-spacing: 1px;
+
+  /* Be Vietnam Pro ships Regular / Medium / SemiBold / Bold. */
+  --font-weight-*: initial;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ---- Spacing ----------------------------------------------------------
+   * DELIBERATE DEVIATION FROM TAILWIND: the spacing multiplier is 1px, not the
+   * stock 0.25rem. So `p-16` is 16px, `gap-8` is 8px — the number in the class
+   * IS the pixel value in Figma. This keeps a designer's Figma measurements and
+   * the code in the same unit, and matches the radius tokens below (`rounded-16`
+   * = 16px). Trade-off: stock Tailwind muscle memory is wrong here — `p-4` is
+   * 4px, not 16px. Stick to multiples of 4.
+   */
+  --spacing: 1px;
+
+  /* ---- Radius -----------------------------------------------------------
+   * Figma "Corner radius" page states the rule, not a scale:
+   *   "Tuân theo bội số 4 … Không dùng trường hợp radius = 0"
+   * So the scale is multiples of 4 and `rounded-none` deliberately does not exist.
+   */
+  --radius-*: initial;
+  --radius-4: 4px;
+  --radius-8: 8px;
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-20: 20px;
+  --radius-24: 24px;
+  --radius-32: 32px;
+  --radius-full: 9999px;
+
+  /* ---- Elevation --------------------------------------------------------
+   * Figma effect styles Shadow 1..5, in order of increasing elevation.
+   */
+  --shadow-*: initial;
+  --shadow-1: 0 1px 4px 0 rgb(0 0 0 / 0.2);
+  --shadow-2:
+    0 2px 6px 2px rgb(0 0 0 / 0.1), 0 1px 2px 0 rgb(0 0 0 / 0.2);
+  --shadow-3:
+    0 1px 3px 0 rgb(0 0 0 / 0.3), 0 4px 8px 3px rgb(0 0 0 / 0.15);
+  --shadow-4:
+    0 2px 3px 0 rgb(0 0 0 / 0.3), 0 6px 10px 4px rgb(0 0 0 / 0.15);
+  --shadow-5:
+    0 2px 4px 0 rgb(0 0 0 / 0.15), 0 2px 16px 6px rgb(0 0 0 / 0.15);
+}
+
+/* ---- Brand gradients ----------------------------------------------------
+ * Figma: Brand/Gradient/Horizontal, Brand/Gradient/Vertical.
+ * Stop positions are exact; the axis is derived from each style's
+ * gradientTransform and should be eyeballed against Figma before sign-off.
+ */
+@utility bg-brand-gradient-h {
+  background-image: linear-gradient(
+    to right,
+    #da2128 0%,
+    #da2128 50%,
+    #f9a61c 75%,
+    #f9c016 85%,
+    #ffdd00 100%
+  );
+}
+
+@utility bg-brand-gradient-v {
+  background-image: linear-gradient(
+    to bottom,
+    #ea1d25 50%,
+    #f99d1c 75%,
+    #fcb914 85%,
+    #facb0d 100%
+  );
+}
+
+/* Figma effect style "White text shadow" — for white text over imagery.
+ * Modelled as text-shadow (Figma expresses it as a drop shadow; spread is dropped). */
+@utility text-shadow-white {
+  text-shadow:
+    0 1px 8px rgb(0 0 0 / 0.6),
+    0 1px 4px rgb(0 0 0 / 0.2);
+}
