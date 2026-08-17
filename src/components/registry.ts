@@ -208,6 +208,12 @@ export const COMPONENTS: ComponentEntry[] = [
     notes: "4 size × default/inverted — optional subtitle/action",
   },
   {
+    slug: "select",
+    name: "Select Dropdown",
+    figmaNode: "7:192663",
+    notes: "trigger card + Radio-panel bottom-sheet — no :state axis",
+  },
+  {
     slug: "slider",
     name: "Slider",
     figmaNode: "2678:220840",
