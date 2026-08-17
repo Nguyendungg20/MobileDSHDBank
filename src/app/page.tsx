@@ -80,6 +80,12 @@ export default function GalleryPage() {
         >
           Component dev
         </Link>
+        <Link
+          href="/playground"
+          className="text-subheadline font-medium text-brand-red hover:underline"
+        >
+          Playground
+        </Link>
       </footer>
     </main>
   );
